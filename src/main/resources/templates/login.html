@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - TotalSecurity</title>
+    <style>
+        body {
+            background: #f5f6fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #fff;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+            color: #2d3436;
+            text-align: center;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #dfe6e9;
+            border-radius: 5px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 0.75rem;
+            background: #0984e3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background: #74b9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post" action="/login">
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
